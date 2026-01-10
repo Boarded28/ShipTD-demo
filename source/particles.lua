@@ -1,6 +1,6 @@
 local particles = {}
 
-function particles.spawn(t, x, y)
+function particles.spawn(t, x, y) --[spawns 100 particles in an instant, places the data in a table]
     for i=1, 100 do
         table.insert(t, {
             x = x, y = y,
@@ -11,7 +11,7 @@ function particles.spawn(t, x, y)
     end
 end
 
-function particles.update(t, dt)
+function particles.update(t, dt) --[itterates in the table with the data; gives them update regarding positions and lifetime]
     for i = #t, 1, -1 do
         local p = t[i]
         p.x, p.y = p.x + p.vx * dt, p.y + p.vy * dt
@@ -23,7 +23,7 @@ function particles.update(t, dt)
     end
 end
 
-function particles.draw(t)
+function particles.draw(t) --[itterates in the table with the data; draws every object]
     for i = #t, 1, -1 do
         local p = t[i]
         love.graphics.rectangle("fill", p.x, p.y, 1, 1)
