@@ -1,5 +1,7 @@
+// ignore this file, it's for "deprecated" functions in love2D but somehow still works
+// Example: math.atan2(y,x)
 {
     "Lua.diagnostics.disable": [
-        "deprecated"
+        "deprecated",
     ]
 }
