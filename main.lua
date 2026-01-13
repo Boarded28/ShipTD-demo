@@ -2,7 +2,7 @@ local Entities = {} --// table to store all our entities
 
 function love.load()
     --// Requirements
-    local Player = require("source.player")
+    local Player = require("player")
 
     --// Screen values
     local sw = love.graphics.getWidth()
